@@ -8,8 +8,11 @@ import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
 
 export async function createUser(user: CreateUserParams) {
+  console.log("here inside this");
   try {
-    await connectToDatabase();
+    let res = await connectToDatabase();
+    console.log(res, "resss++++++++++");
+
     const newUser = await User.create(user);
 
     return JSON.parse(JSON.stringify(newUser));
