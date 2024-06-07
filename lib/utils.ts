@@ -68,6 +68,7 @@ export const formUrlQuery = ({
 // REMOVE KEY FROM QUERY
 export function removeKeysFromQuery({
   keysToRemove,
+  searchParams
 }: RemoveUrlQueryParams) {
   const currentUrl = qs.parse(searchParams);
 
